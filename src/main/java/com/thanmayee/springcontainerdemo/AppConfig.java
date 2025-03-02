@@ -20,12 +20,10 @@ public class AppConfig {
 
   @Bean
   public PrintingMachine
-      printingMachine() { // @Qualifier("laptop") Computer computer) { (we can use @Qualifier at
-                          // constructor level instead of at setter level
+      printingMachine() {
     PrintingMachine machine = new PrintingMachine();
     machine.setId(101);
     machine.setPaperTray(paperTray()); // Injecting PaperTray
-    // machine.setComputer(computer);
     return machine;
 
     // return new PrintingMachine(101, paperTray());

@@ -1,7 +1,6 @@
 package com.thanmayee.springcontainerdemo;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component // for autowire scenario in application context we need this
@@ -42,7 +41,6 @@ public class PrintingMachine {
 	}
 
 	@Autowired
-	@Qualifier("laptop")
 	public void setComputer(Computer computer) {
 		this.computer = computer;
 	}
