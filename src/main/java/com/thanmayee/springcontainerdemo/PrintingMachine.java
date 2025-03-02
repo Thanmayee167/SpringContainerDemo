@@ -6,6 +6,12 @@ public class PrintingMachine {
 	private int id;
 	private PaperTray paperTray;
 
+	// Constructor Injection
+	public PrintingMachine(int id, PaperTray paperTray) {
+		this.id = id;
+		this.paperTray = paperTray;
+	}
+
 	public void print() {
 		System.out.println("I am prinitng");
 	}

@@ -5,9 +5,15 @@
            https://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- Bean Definition -->
-    <bean id="printingMachine" class="com.thanmayee.springcontainerdemo.PrintingMachine" scope="prototype">
+    
+    <!--<bean id="printingMachine" class="com.thanmayee.springcontainerdemo.PrintingMachine" scope="prototype">
     	<property name="id" value="101"/>
-    	<property name="paperTray" ref="paperTray"/> <!-- Injecting PaperTray -->
+    	<property name="paperTray" ref="paperTray"/>  Injecting PaperTray 
+    </bean>-->
+    
+    <bean id="printingMachine" class="com.thanmayee.springcontainerdemo.PrintingMachine" scope="prototype">
+        <constructor-arg value="101"/>
+        <constructor-arg ref="paperTray"/> <!-- Injecting PaperTray -->
     </bean>
 	
 	<bean id="paperTray" class="com.thanmayee.springcontainerdemo.PaperTray">

@@ -18,9 +18,11 @@ public class AppConfig {
 
 	@Bean
 	public PrintingMachine printingMachine() {
-		PrintingMachine machine = new PrintingMachine();
-		machine.setId(101);
-		machine.setPaperTray(paperTray()); // Injecting PaperTray
-		return machine;
+//		PrintingMachine machine = new PrintingMachine();
+//		machine.setId(101);
+//		machine.setPaperTray(paperTray()); // Injecting PaperTray
+//		return machine;
+
+		return new PrintingMachine(101, paperTray());
 	}
 }
