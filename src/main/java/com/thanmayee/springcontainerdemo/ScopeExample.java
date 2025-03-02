@@ -24,7 +24,7 @@ public class ScopeExample {
 		printingMachine1 = (PrintingMachine) factory.getBean("printingMachine");
 
 		System.out.println("Using BeanFactory (printingMachine == printingMachine1: "
-				+ (printingMachine == printingMachine1) + ")"); // TRUE
+				+ (printingMachine == printingMachine1) + ")"); // FALSE
 
 		// Application context
 
@@ -34,7 +34,7 @@ public class ScopeExample {
 		printingMachine1 = context.getBean(PrintingMachine.class);
 
 		System.out.println("Using ApplicationContext (printingMachine == printingMachine1: "
-				+ (printingMachine == printingMachine1) + ")"); // TRUE
+				+ (printingMachine == printingMachine1) + ")"); // FALSE
 
 	}
 }
