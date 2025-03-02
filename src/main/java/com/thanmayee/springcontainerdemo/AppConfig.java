@@ -12,6 +12,8 @@ class AppConfig {
 	@Bean
 	@Scope("prototype")
 	public PrintingMachine printingMachineBean() {
-		return new PrintingMachine();
+		PrintingMachine printingMachine = new PrintingMachine();
+		printingMachine.setId(101);
+		return printingMachine;
 	}
 }

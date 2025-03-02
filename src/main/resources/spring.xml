@@ -5,6 +5,8 @@
            https://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- Bean Definition -->
-    <bean id="printingMachine" class="com.thanmayee.springcontainerdemo.PrintingMachine" scope="prototype"/>
+    <bean id="printingMachine" class="com.thanmayee.springcontainerdemo.PrintingMachine" scope="prototype">
+    	<property name="id" value="101"/>
+    </bean>
 
 </beans>
