@@ -27,7 +27,7 @@
     	<property name="paperTray" ref="paperTray"/>
 	</bean>
 
-	 <!--<bean id="laptop" class="com.thanmayee.springcontainerdemo.Laptop"/>-->
+	 <bean id="laptop" class="com.thanmayee.springcontainerdemo.Laptop" primary="true"/>
 	
 	 <bean id="desktop" class="com.thanmayee.springcontainerdemo.Desktop"/>
 </beans>
