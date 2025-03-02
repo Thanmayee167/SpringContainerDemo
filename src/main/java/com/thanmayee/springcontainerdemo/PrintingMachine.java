@@ -1,6 +1,10 @@
 package com.thanmayee.springcontainerdemo;
 
-//@Component // not needed for manual bean creation (wrongly placed)
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
+@Component // for autowire scenario in application context we need this
 public class PrintingMachine {
 
 	private int id;
@@ -37,6 +41,8 @@ public class PrintingMachine {
 		return computer;
 	}
 
+	@Autowired
+	@Qualifier("laptop")
 	public void setComputer(Computer computer) {
 		this.computer = computer;
 	}

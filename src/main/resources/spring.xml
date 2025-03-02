@@ -22,13 +22,12 @@
     
     <!-- AutowireExample -->
     
-    <bean id="printingMachine" class="com.thanmayee.springcontainerdemo.PrintingMachine" scope="prototype">
+    <bean id="printingMachine" class="com.thanmayee.springcontainerdemo.PrintingMachine" scope="prototype" autowire="byName">
 		<property name="id" value="101"/>
     	<property name="paperTray" ref="paperTray"/>
-        <property name="computer" ref="laptop"/>
 	</bean>
 
-	 <bean id="laptop" class="com.thanmayee.springcontainerdemo.Laptop"/>
+	 <bean id="computer" class="com.thanmayee.springcontainerdemo.Laptop"/>
 	
 	 <bean id="desktop" class="com.thanmayee.springcontainerdemo.Desktop"/>
 </beans>

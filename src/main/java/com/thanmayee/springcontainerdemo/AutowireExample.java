@@ -23,9 +23,9 @@ public class AutowireExample {
 
 		System.out.println("PrintingMachine id=" + printingMachine.getId()); // PrintingMachine id=101
 
-		printingMachine.getPaperTray().showCapacity();
+		printingMachine.getPaperTray().showCapacity(); // PaperTray Capacity: 250 sheets.
 
-		printingMachine.getComputer().compile();
+		printingMachine.getComputer().compile(); // Code Compiled in a Laptop
 
 		ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 
@@ -33,8 +33,8 @@ public class AutowireExample {
 
 		System.out.println("PrintingMachine id=" + printingMachine.getId()); // PrintingMachine id=101
 
-		printingMachine.getPaperTray().showCapacity();
+		printingMachine.getPaperTray().showCapacity(); // PaperTray Capacity: 250 sheets.
 
-		printingMachine.getComputer().compile();
+		printingMachine.getComputer().compile(); // Code Compiled in a Laptop
 	}
 }
