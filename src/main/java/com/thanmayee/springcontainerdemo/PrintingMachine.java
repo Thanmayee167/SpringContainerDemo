@@ -5,12 +5,13 @@ public class PrintingMachine {
 
 	private int id;
 	private PaperTray paperTray;
+	private Computer computer;
 
 	// Constructor Injection
-	public PrintingMachine(int id, PaperTray paperTray) {
-		this.id = id;
-		this.paperTray = paperTray;
-	}
+//	public PrintingMachine(int id, PaperTray paperTray) {
+//		this.id = id;
+//		this.paperTray = paperTray;
+//	}
 
 	public void print() {
 		System.out.println("I am prinitng");
@@ -30,5 +31,13 @@ public class PrintingMachine {
 
 	public void setPaperTray(PaperTray paperTray) {
 		this.paperTray = paperTray;
+	}
+
+	public Computer getComputer() {
+		return computer;
+	}
+
+	public void setComputer(Computer computer) {
+		this.computer = computer;
 	}
 }

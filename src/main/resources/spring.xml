@@ -11,12 +11,24 @@
     	<property name="paperTray" ref="paperTray"/>  Injecting PaperTray 
     </bean>-->
     
-    <bean id="printingMachine" class="com.thanmayee.springcontainerdemo.PrintingMachine" scope="prototype">
+    <!--<bean id="printingMachine" class="com.thanmayee.springcontainerdemo.PrintingMachine" scope="prototype">
         <constructor-arg value="101"/>
-        <constructor-arg ref="paperTray"/> <!-- Injecting PaperTray -->
-    </bean>
+        <constructor-arg ref="paperTray"/>  Injecting PaperTray 
+    </bean>-->
 	
 	<bean id="paperTray" class="com.thanmayee.springcontainerdemo.PaperTray">
         <property name="capacity" value="250"/>
     </bean>
+    
+    <!-- AutowireExample -->
+    
+    <bean id="printingMachine" class="com.thanmayee.springcontainerdemo.PrintingMachine" scope="prototype">
+		<property name="id" value="101"/>
+    	<property name="paperTray" ref="paperTray"/>
+        <property name="computer" ref="laptop"/>
+	</bean>
+
+	 <bean id="laptop" class="com.thanmayee.springcontainerdemo.Laptop"/>
+	
+	 <bean id="desktop" class="com.thanmayee.springcontainerdemo.Desktop"/>
 </beans>

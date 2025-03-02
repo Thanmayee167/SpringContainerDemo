@@ -18,11 +18,22 @@ public class AppConfig {
 
 	@Bean
 	public PrintingMachine printingMachine() {
-//		PrintingMachine machine = new PrintingMachine();
-//		machine.setId(101);
-//		machine.setPaperTray(paperTray()); // Injecting PaperTray
-//		return machine;
+		PrintingMachine machine = new PrintingMachine();
+		machine.setId(101);
+		machine.setPaperTray(paperTray()); // Injecting PaperTray
+		machine.setComputer(laptop());
+		return machine;
 
-		return new PrintingMachine(101, paperTray());
+		// return new PrintingMachine(101, paperTray());
+	}
+
+	@Bean
+	public Laptop laptop() {
+		return new Laptop();
+	}
+
+	@Bean
+	public Desktop desktop() {
+		return new Desktop();
 	}
 }
