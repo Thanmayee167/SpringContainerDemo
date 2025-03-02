@@ -7,6 +7,10 @@
     <!-- Bean Definition -->
     <bean id="printingMachine" class="com.thanmayee.springcontainerdemo.PrintingMachine" scope="prototype">
     	<property name="id" value="101"/>
+    	<property name="paperTray" ref="paperTray"/> <!-- Injecting PaperTray -->
     </bean>
-
+	
+	<bean id="paperTray" class="com.thanmayee.springcontainerdemo.PaperTray">
+        <property name="capacity" value="250"/>
+    </bean>
 </beans>
