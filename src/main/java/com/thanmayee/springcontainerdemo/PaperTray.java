@@ -1,5 +1,8 @@
 package com.thanmayee.springcontainerdemo;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class PaperTray {
 	private int capacity;
 

@@ -21,11 +21,9 @@
     </bean>
     
     <!-- AutowireExample -->
-    
-    <bean id="printingMachine" class="com.thanmayee.springcontainerdemo.PrintingMachine" scope="prototype" autowire="byType">
-		<property name="id" value="101"/>
-    	<property name="paperTray" ref="paperTray"/>
-	</bean>
+    <!-- autowire="constructor" tells Spring to match the constructor parameters of PrintingMachine with available beans (paperTray and computer). -->
+    <bean id="printingMachine" class="com.thanmayee.springcontainerdemo.PrintingMachine" scope="prototype" autowire="constructor">
+    </bean>
 
 	 <bean id="laptop" class="com.thanmayee.springcontainerdemo.Laptop" primary="true"/>
 	

@@ -11,10 +11,12 @@ public class PrintingMachine {
 	private Computer computer;
 
 	// Constructor Injection
-//	public PrintingMachine(int id, PaperTray paperTray) {
-//		this.id = id;
-//		this.paperTray = paperTray;
-//	}
+	@Autowired
+	public PrintingMachine(PaperTray paperTray, Computer computer) {
+		this.id = 102;
+		this.paperTray = paperTray;
+		this.computer = computer;
+	}
 
 	public void print() {
 		System.out.println("I am prinitng");
@@ -40,7 +42,6 @@ public class PrintingMachine {
 		return computer;
 	}
 
-	@Autowired
 	public void setComputer(Computer computer) {
 		this.computer = computer;
 	}
